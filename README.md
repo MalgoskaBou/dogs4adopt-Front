@@ -1,2 +1,0 @@
-# dogsForadopt
-Created with CodeSandbox
