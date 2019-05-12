@@ -1,0 +1,8 @@
+.DogCard{
+    background-color: lightgrey;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
