@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './SearchingBox.module.css'
+import styles from './SearchingBox.module.scss'
 
 const SearchingBox = () =>(
     <div className = {styles.search}>Tu będzie szukajka</div>

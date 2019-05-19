@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Header.module.css'
+import styles from './Header.module.scss'
 
 const Header = () =>(
     <h1 className = {styles.H1}>Tu będzie nagłówek</h1>
