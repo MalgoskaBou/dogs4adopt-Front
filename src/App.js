@@ -4,7 +4,7 @@ import SearchingBox from "./Components/SearchingBox/SearchingBox"
 import MapButton from "./Components/MapButton/MapButton"
 import DogCardsBar from "./Components/DogCardsBar/DogCardsBar"
 
-import "./styles.css";
+import "./styles.scss";
 
 const App = () => (
       <>
