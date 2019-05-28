@@ -1,6 +1,6 @@
 ## Uwaga dotycząca automatycznego formatowania kodu
 
-Żeby kod ormatował się automatycznie podczas zapisu, trzeba dodać odpowiednie ustawienia do VSCode.
+Żeby kod formatował się automatycznie podczas zapisu, trzeba dodać odpowiednie ustawienia do VSCode.
 
 Tak wygląda mój _settings.json_ :
 
