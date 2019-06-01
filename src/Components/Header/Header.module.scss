@@ -1,13 +1,13 @@
-@import "../../Styles/variables";
+@import '../../Styles/variables';
 
-.H1{
-    background-image: url("../../assets/img/bonesPattern.png");
-    background-color: $primary-color;
-    padding: 20px;
-    font-size: 60px;
-    color: $light-text-color;
-    text-transform: uppercase;
-    margin-bottom: 50px;
-    font-family: 'Ostrich';
-    letter-spacing: 6px;
+.H1 {
+  background-image: url('../../assets/img/bonesPattern.png');
+  background-color: $primary-color;
+  padding: 20px;
+  font-size: 60px;
+  color: $light-text-color;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  font-family: 'Ostrich';
+  letter-spacing: 6px;
 }
