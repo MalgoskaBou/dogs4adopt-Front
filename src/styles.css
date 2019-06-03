@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Ostrich';
+  font-style: normal;
+  font-weight: bold;
+
+  src: url('./assets/fonts/ostrich/OstrichSans-Bold.eot');
+  src: url('./assets/fonts/ostrich/OstrichSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./assets/fonts/ostrich/OstrichSans-Bold.woff') format('woff'),
+    url('./assets/fonts/ostrich/OstrichSans-Bold.ttf') format('truetype');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.filtersBar {
+  margin-bottom: 50px;
+}
