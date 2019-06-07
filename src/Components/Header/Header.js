@@ -17,6 +17,9 @@ const Header = () => {
           <li className={styles.nav__element}>
             <Link to="/shelters">Schroniska</Link>
           </li>
+          <li>
+            <Link to="/topics">Topics</Link>
+          </li>
         </ul>
       </nav>
     </header>
