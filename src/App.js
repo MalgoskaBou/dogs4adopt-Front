@@ -8,21 +8,33 @@ import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 
 import './styles.css';
+import SingleDogPopUp from './Components/SingleDogPopUp/SingleDogPopUp';
 
 const MainPage = () => {
-  return <h1>MainPage</h1>;
+  return (
+    <div>
+      <h1>MainPage</h1>
+      <SingleDogPopUp />
+    </div>
+  );
 };
 
 const SingleShelterListComponent = ({ match }) => {
   return (
     <div className="shelters--single-shelter">
       <h1>This is shelter: {match.params.name}</h1>
+      <SingleDogPopUp />
     </div>
   );
 };
 
 const SheltersListComponent = () => {
-  return <div className="shelters--list">Here you see whole list of shelters</div>;
+  return (
+    <div className="shelters--list">
+      <h2>Here you see whole list of shelters</h2>
+      <SingleDogPopUp />
+    </div>
+  );
 };
 
 const SheltersPage = ({ match }) => {
@@ -49,11 +61,21 @@ const SheltersPage = ({ match }) => {
 };
 
 const DogsPage = () => {
-  return <h1>DogsPage</h1>;
+  return (
+    <div>
+      <h1>DogsPage</h1>
+      <SingleDogPopUp />
+    </div>
+  );
 };
 
 const AboutPage = () => {
-  return <h1>AboutPage</h1>;
+  return (
+    <div>
+      <h1>AboutPage</h1>
+      <SingleDogPopUp />
+    </div>
+  );
 };
 
 const App = () => {
