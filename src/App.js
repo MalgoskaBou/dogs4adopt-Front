@@ -8,20 +8,12 @@ import { Link } from 'react-router-dom';
 import MainPage from './Pages/MainPage';
 
 import SingleShelterOnListComponent from './Components/SingleShelterOnList/SingleShelterOnListComponent';
+import SheltersListComponent from './Components/SheltersListComponent/SheltersListComponent';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 
 import './styles.css';
 import SingleDogPopUp from './Components/SingleDogPopUp/SingleDogPopUp';
-
-const SheltersListComponent = () => {
-  return (
-    <div className="shelters--list">
-      <h2>Here you see whole list of shelters</h2>
-      <SingleDogPopUp />
-    </div>
-  );
-};
 
 const SheltersPage = ({ match }) => {
   return (
