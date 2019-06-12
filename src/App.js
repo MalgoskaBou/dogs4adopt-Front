@@ -7,7 +7,7 @@ import SheltersPage from './Pages/SheltersPage';
 import AboutPage from './Pages/AboutPage';
 
 import Header from './Components/Header/Header';
-import Footer from './Components/Footer/Footer';
+import FooterComponent from './Components/FooterComponent/FooterComponent';
 
 import './styles.css';
 
@@ -22,7 +22,7 @@ const App = () => {
         <Route path="/about" component={AboutPage} />
       </Switch>
 
-      <Footer />
+      <FooterComponent />
     </Router>
   );
 };
