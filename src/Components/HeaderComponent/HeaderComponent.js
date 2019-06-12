@@ -17,8 +17,8 @@ const HeaderComponent = () => {
           <li className={styles.nav__element}>
             <Link to="/shelters">Schroniska</Link>
           </li>
-          <li>
-            <Link to="/topics">Topics</Link>
+          <li className={styles.nav__element}>
+            <Link to="/about">About</Link>
           </li>
         </ul>
       </nav>
