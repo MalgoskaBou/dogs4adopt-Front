@@ -3,40 +3,15 @@
 /* eslint-disable no-unused-expressions */
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 
 import MainPage from './Pages/MainPage';
+import SheltersPage from './Pages/SheltersPage';
 
-import SingleShelterOnListComponent from './Components/SingleShelterOnList/SingleShelterOnListComponent';
-import SheltersListComponent from './Components/SheltersListComponent/SheltersListComponent';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 
 import './styles.css';
 import SingleDogPopUp from './Components/SingleDogPopUp/SingleDogPopUp';
-
-const SheltersPage = ({ match }) => {
-  return (
-    <div className="shelters--container">
-      <h1>SheltersPage</h1>
-      <div className="shelters--side-bar">
-        <ul>
-          <li>
-            <Link to={`${match.url}`}>All</Link>
-          </li>
-          <li>
-            <Link to={`${match.url}/lodz`}>Łódź</Link>
-          </li>
-          <li>
-            <Link to={`${match.url}/jelenia-gora`}>Jelenia Góra</Link>
-          </li>
-        </ul>
-      </div>
-      <Route exact path={match.path} render={() => <SheltersListComponent />} />
-      <Route path={`${match.path}/:name`} component={SingleShelterOnListComponent} />
-    </div>
-  );
-};
 
 // eslint-disable-next-line react/prefer-stateless-function
 class DogsPage extends React.Component {
