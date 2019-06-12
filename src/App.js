@@ -4,29 +4,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+
+import MainPage from './Pages/MainPage';
+
+import SingleShelterOnListComponent from './Components/SingleShelterOnList/SingleShelterOnListComponent';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 
 import './styles.css';
 import SingleDogPopUp from './Components/SingleDogPopUp/SingleDogPopUp';
-
-const MainPage = () => {
-  return (
-    <div>
-      <h1>MainPage</h1>
-      <SingleDogPopUp />
-    </div>
-  );
-};
-
-const SingleShelterListComponent = ({ match }) => {
-  return (
-    <div className="shelters--single-shelter">
-      <h1>This is shelter: {match.params.name}</h1>
-      <SingleDogPopUp />
-    </div>
-  );
-};
 
 const SheltersListComponent = () => {
   return (
@@ -55,19 +41,50 @@ const SheltersPage = ({ match }) => {
         </ul>
       </div>
       <Route exact path={match.path} render={() => <SheltersListComponent />} />
-      <Route path={`${match.path}/:name`} component={SingleShelterListComponent} />
+      <Route path={`${match.path}/:name`} component={SingleShelterOnListComponent} />
     </div>
   );
 };
 
-const DogsPage = () => {
-  return (
-    <div>
-      <h1>DogsPage</h1>
-      <SingleDogPopUp />
-    </div>
-  );
-};
+// eslint-disable-next-line react/prefer-stateless-function
+class DogsPage extends React.Component {
+  state = {
+    isPopUpOpen: false,
+  };
+
+  openPopUp = () => {
+    this.setState(() => {
+      return { isPopUpOpen: true };
+    });
+  };
+
+  handelOnDogIconClick = () => {
+    this.openPopUp();
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>DogsPage</h1>
+        <button type="button" onClick={this.handelOnDogIconClick}>
+          Dog 1
+        </button>
+        <button type="button" onClick={this.handelOnDogIconClick}>
+          Dog 2
+        </button>
+        <button
+          type="button"
+          onClick={this.handelOnDogIconClick}
+          onKeyPress={this.handelOnDogIconClick}
+        >
+          {' '}
+          Dog 3
+        </button>
+        <SingleDogPopUp isUp={this.state.isPopUpOpen} />
+      </div>
+    );
+  }
+}
 
 const AboutPage = () => {
   return (

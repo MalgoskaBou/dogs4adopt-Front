@@ -1,5 +1,6 @@
 import React from 'react';
 
-const SingleDogPopUp = () => <div>SingleDogPopUp</div>;
-
+const SingleDogPopUp = ({ isUp }) => {
+  return <div style={{ display: `${isUp ? 'block' : 'none'}` }}>SingleDogPopUp</div>;
+};
 export default SingleDogPopUp;
