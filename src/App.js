@@ -6,7 +6,7 @@ import DogsPage from './Pages/DogsPage';
 import SheltersPage from './Pages/SheltersPage';
 import AboutPage from './Pages/AboutPage';
 
-import Header from './Components/Header/Header';
+import HeaderComponent from './Components/HeaderComponent/HeaderComponent';
 import FooterComponent from './Components/FooterComponent/FooterComponent';
 
 import './styles.css';
@@ -14,7 +14,7 @@ import './styles.css';
 const App = () => {
   return (
     <Router>
-      <Header />
+      <HeaderComponent />
       <Switch>
         <Route exact path="/" component={MainPage} />
         <Route path="/dogs" component={DogsPage} />

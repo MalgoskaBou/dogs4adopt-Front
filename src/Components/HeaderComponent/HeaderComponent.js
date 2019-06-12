@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Header.module.scss';
+import styles from './HeaderComponent.module.scss';
 
-const Header = () => {
+const HeaderComponent = () => {
   return (
     <header className={styles.header}>
       <h1 className={styles.header__logo}>dogs 4 adopt</h1>
@@ -26,4 +26,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderComponent;
