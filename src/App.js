@@ -4,21 +4,12 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MainPage from './Pages/MainPage';
 import DogsPage from './Pages/DogsPage';
 import SheltersPage from './Pages/SheltersPage';
+import AboutPage from './Pages/AboutPage';
 
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 
 import './styles.css';
-import SingleDogPopUp from './Components/SingleDogPopUp/SingleDogPopUp';
-
-const AboutPage = () => {
-  return (
-    <div>
-      <h1>AboutPage</h1>
-      <SingleDogPopUp />
-    </div>
-  );
-};
 
 const App = () => {
   return (
