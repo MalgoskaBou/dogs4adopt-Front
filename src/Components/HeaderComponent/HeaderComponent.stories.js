@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import StoryRouter from 'storybook-react-router';
 import { Link } from 'react-router-dom';
 import HeaderComponent from './HeaderComponent';
-import styles from './HeaderComponent.module.scss';
+import { Ul, Li } from './HeaderComponent.style';
 
 const stories = storiesOf('HeaderComponent', module);
 
@@ -13,19 +13,19 @@ stories.add('Header of page', () => <HeaderComponent />);
 
 stories.add('Nav instate of NavComponent', () => (
   <nav>
-    <ul className={styles.nav__menu}>
-      <li className={styles.nav__element}>
+    <Ul>
+      <Li>
         <Link to="/">Strona Główna</Link>
-      </li>
-      <li className={styles.nav__element}>
+      </Li>
+      <Li>
         <Link to="/dogs">Psy</Link>
-      </li>
-      <li className={styles.nav__element}>
+      </Li>
+      <Li>
         <Link to="/shelters">Schroniska</Link>
-      </li>
-      <li className={styles.nav__element}>
+      </Li>
+      <Li>
         <Link to="/about">About</Link>
-      </li>
-    </ul>
+      </Li>
+    </Ul>
   </nav>
 ));
