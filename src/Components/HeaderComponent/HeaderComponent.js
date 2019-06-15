@@ -1,28 +1,60 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import styles from './HeaderComponent.module.scss';
+import headerBgImg from '../../assets/img/bonesPattern.png';
+import colors from '../../Styles/colors';
+
+const Li = styled.li`
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid green;
+  cursor: pointer;
+`;
+
+const Ul = styled.ul`
+  display: flex;
+  flex-direction: row;
+`;
+
+const LogoText = styled.h1``;
+
+const Header = styled.header`
+  background-image: url(${headerBgImg});
+  background-color: ${colors.primaryColor};
+  padding: 20px;
+  font-size: 20px;
+  color: ${colors.lightTextColor};
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  font-family: 'Ostrich';
+  letter-spacing: 6px;
+  display: flex;
+  justify-content: space-between;
+`;
 
 const HeaderComponent = () => {
   return (
-    <header className={styles.header}>
-      <h1 className={styles.header__logo}>dogs 4 adopt</h1>
+    <Header>
+      <LogoText>dogs 4 adopt</LogoText>
       <nav>
-        <ul className={styles.nav__menu}>
-          <li className={styles.nav__element}>
+        <Ul>
+          <Li>
             <Link to="/">Strona Główna</Link>
-          </li>
-          <li className={styles.nav__element}>
+          </Li>
+          <Li>
             <Link to="/dogs">Psy</Link>
-          </li>
-          <li className={styles.nav__element}>
+          </Li>
+          <Li>
             <Link to="/shelters">Schroniska</Link>
-          </li>
-          <li className={styles.nav__element}>
+          </Li>
+          <Li>
             <Link to="/about">About</Link>
-          </li>
-        </ul>
+          </Li>
+        </Ul>
       </nav>
-    </header>
+    </Header>
   );
 };
 
